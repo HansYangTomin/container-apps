@@ -1,6 +1,3 @@
-version: '2'
-
-services:
   redis:
     restart: always
     image: sameersbn/redis:latest
