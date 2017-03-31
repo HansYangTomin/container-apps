@@ -8,7 +8,7 @@ postgresql:
     - DB_EXTENSION=pg_trgm
 gitlab:
   restart: always
-  image: sameersbn/gitlab:8.9.6-1
+  image: sameersbn/gitlab:latest
   links:
     - redis:redisio
     - postgresql:postgresql
@@ -20,6 +20,7 @@ gitlab:
     - GITLAB_PORT=10080
     - GITLAB_SSH_PORT=10022
     - GITLAB_SECRETS_DB_KEY_BASE=qcs-gitlab-app
+    - GITLAB_HOST=nas.iapps360.net:10080
 redis:
   restart: always
   image: sameersbn/redis:latest
